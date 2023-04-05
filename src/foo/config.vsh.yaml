@@ -1,0 +1,15 @@
+functionality:
+  name: foo
+  arguments:
+    - type: file
+      name: --input
+    - type: file
+      name: --output
+      direction: output
+  resources:
+    - type: bash_script
+      text: cp $par_input $par_output
+platforms:
+  - type: native
+  - type: docker
+    image: bash:4.0
